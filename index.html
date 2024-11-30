@@ -2,89 +2,100 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>AI 王的AI库</title>
-    <style>
-        .ai-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        
-        .ai-card {
-            position: relative;
-            padding: 15px;
-            border-radius: 8px;
-            background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .ai-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .ai-link {
-            text-decoration: none;
-            color: #333;
-        }
-        
-        .tooltip {
-            visibility: hidden;
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #333;
-            color: white;
-            padding: 10px;
-            border-radius: 6px;
-            width: 200px;
-            z-index: 1;
-        }
-        
-        .ai-card:hover .tooltip {
-            visibility: visible;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 导航 | 发现最佳AI工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="ai-grid">
+    <header class="header">
+        <h1><i class="fas fa-robot"></i> AI 导航</h1>
+        <p>探索和发现最优秀的人工智能工具</p>
+    </header>
+
+    <nav class="category-nav">
+        <button class="active">全部</button>
+        <button>聊天对话</button>
+        <button>图像创作</button>
+        <button>视频制作</button>
+        <button>办公效率</button>
+    </nav>
+
+    <main class="ai-grid">
+        <!-- ChatGPT -->
         <div class="ai-card">
-            <a href="https://chat.openai.com" class="ai-link">
-                ChatGPT
+            <a href="https://chat.openai.com" class="ai-link" target="_blank">
+                <div class="card-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="icon">
+                    <h3>ChatGPT</h3>
+                </div>
+                <div class="tags">
+                    <span class="tag">AI对话</span>
+                    <span class="tag">写作助手</span>
+                </div>
                 <div class="tooltip">
-                    OpenAI开发的大语言模型，能够进行自然对话、回答问题、协助写作等多种任务
+                    OpenAI开发的大语言模型，能够进行自然对话、回答问题、协助写作等多种任务。支持GPT-3.5和GPT-4模型。
                 </div>
             </a>
         </div>
 
+        <!-- Claude -->
         <div class="ai-card">
-            <a href="https://www.midjourney.com" class="ai-link">
-                Midjourney
+            <a href="https://claude.ai" class="ai-link" target="_blank">
+                <div class="card-header">
+                    <img src="https://claude.ai/favicon.ico" alt="Claude" class="icon">
+                    <h3>Claude</h3>
+                </div>
+                <div class="tags">
+                    <span class="tag">AI对话</span>
+                    <span class="tag">文档分析</span>
+                </div>
                 <div class="tooltip">
-                    AI图像生成工具，通过文字描述生成高质量艺术图像，特别擅长绘画风格的作品
+                    Anthropic开发的AI助手，支持更长的上下文对话，擅长文档分析和学术写作。
                 </div>
             </a>
         </div>
 
+        <!-- Midjourney -->
         <div class="ai-card">
-            <a href="https://claude.ai" class="ai-link">
-                Claude
+            <a href="https://www.midjourney.com" class="ai-link" target="_blank">
+                <div class="card-header">
+                    <img src="https://seeklogo.com/images/M/midjourney-logo-02E160DA6E-seeklogo.com.png" alt="Midjourney" class="icon">
+                    <h3>Midjourney</h3>
+                </div>
+                <div class="tags">
+                    <span class="tag">图像生成</span>
+                    <span class="tag">艺术创作</span>
+                </div>
                 <div class="tooltip">
-                    Anthropic开发的AI助手，擅长长文本理解和生成，支持更长的上下文对话
+                    强大的AI图像生成工具，通过文字描述生成高质量艺术图像，特别擅长艺术风格创作。
                 </div>
             </a>
         </div>
 
+        <!-- Gemini -->
         <div class="ai-card">
-            <a href="https://bard.google.com" class="ai-link">
-                Gemini
+            <a href="https://gemini.google.com" class="ai-link" target="_blank">
+                <div class="card-header">
+                    <img src="https://seeklogo.com/images/G/google-gemini-logo-6D04F05A69-seeklogo.com.png" alt="Gemini" class="icon">
+                    <h3>Gemini</h3>
+                </div>
+                <div class="tags">
+                    <span class="tag">多模态</span>
+                    <span class="tag">AI助手</span>
+                </div>
                 <div class="tooltip">
-                    谷歌最新的AI模型，支持多模态理解，可以处理文本、图像、代码等多种形式的输入
+                    谷歌最新的AI模型，支持文本、图像、代码等多模态输入，能力全面。
                 </div>
             </a>
         </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 AI导航 | 持续更新中...</p>
+    </footer>
+</body>
+</html>
 </body>
 </html>
