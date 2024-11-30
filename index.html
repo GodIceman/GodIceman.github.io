@@ -1,28 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 导航</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AI 王的AI库</title>
+    <style>
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .ai-card {
+            position: relative;
+            padding: 15px;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .ai-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ai-link {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .tooltip {
+            visibility: hidden;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            width: 200px;
+            z-index: 1;
+        }
+        
+        .ai-card:hover .tooltip {
+            visibility: visible;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>AI 导航</h1>
-        <div class="card-container">
-            <a href="https://chat.openai.com" class="card">
-                <h2>ChatGPT</h2>
-                <p>OpenAI的AI对话助手</p>
+    <div class="ai-grid">
+        <div class="ai-card">
+            <a href="https://chat.openai.com" class="ai-link">
+                ChatGPT
+                <div class="tooltip">
+                    OpenAI开发的大语言模型，能够进行自然对话、回答问题、协助写作等多种任务
+                </div>
             </a>
-            
-            <a href="https://claude.ai" class="card">
-                <h2>Claude</h2>
-                <p>Anthropic的AI助手</p>
+        </div>
+
+        <div class="ai-card">
+            <a href="https://www.midjourney.com" class="ai-link">
+                Midjourney
+                <div class="tooltip">
+                    AI图像生成工具，通过文字描述生成高质量艺术图像，特别擅长绘画风格的作品
+                </div>
             </a>
-            
-            <a href="https://gemini.google.com" class="card">
-                <h2>Gemini</h2>
-                <p>Google的AI助手</p>
+        </div>
+
+        <div class="ai-card">
+            <a href="https://claude.ai" class="ai-link">
+                Claude
+                <div class="tooltip">
+                    Anthropic开发的AI助手，擅长长文本理解和生成，支持更长的上下文对话
+                </div>
+            </a>
+        </div>
+
+        <div class="ai-card">
+            <a href="https://bard.google.com" class="ai-link">
+                Gemini
+                <div class="tooltip">
+                    谷歌最新的AI模型，支持多模态理解，可以处理文本、图像、代码等多种形式的输入
+                </div>
             </a>
         </div>
     </div>
