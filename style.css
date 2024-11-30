@@ -24,6 +24,11 @@ h1 {
     font-size: 2.5rem;
 }
 
+h1 i {
+    margin-right: 10px;
+    color: #3b82f6;
+}
+
 .ai-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -52,9 +57,21 @@ h1 {
     height: 100%;
 }
 
-.ai-card h3 {
-    font-size: 1.4rem;
+.card-header {
+    display: flex;
+    align-items: center;
     margin-bottom: 15px;
+}
+
+.card-header img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
     color: #2c3e50;
 }
 
@@ -63,6 +80,7 @@ h1 {
     color: #666;
     display: none;
     line-height: 1.5;
+    margin-top: 10px;
 }
 
 .ai-card:hover .description {
@@ -84,5 +102,15 @@ h1 {
     h1 {
         font-size: 2rem;
     }
+}
+
+/* 图标加载失败时的备用样式 */
+img[alt] {
+    text-indent: -9999px;
+}
+
+img[src$="favicon.ico"] {
+    background-color: #f8f9fa;
+    padding: 2px;
 }
 
